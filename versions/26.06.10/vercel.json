@@ -1,6 +1,6 @@
 {
-  "buildCommand": "cd frontend && npm install && npm run build",
-  "outputDirectory": "frontend/dist",
+  "buildCommand": "cd versions/26.06.10/frontend && npm install && npm run build",
+  "outputDirectory": "versions/26.06.10/frontend/dist",
   "installCommand": "echo 'skip root install'",
   "rewrites": [
     {
