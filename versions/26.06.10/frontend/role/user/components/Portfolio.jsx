@@ -18,7 +18,7 @@ const Portfolio = () => {
                     Featured Projects
                 </h2>
                 
-                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '40px' }}>
+                <div className="portfolio-grid">
                     {projects.map((project, i) => (
                         <div key={i} data-aos="fade-up" data-aos-delay={i * 100} className="card glass" style={{ display: 'flex', flexDirection: 'column', height: '100%', padding: '0', overflow: 'hidden' }}>
                             <div style={{ height: '220px', background: 'rgba(255,255,255,0.05)', position: 'relative', overflow: 'hidden' }}>

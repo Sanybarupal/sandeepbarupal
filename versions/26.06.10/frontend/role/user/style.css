@@ -190,6 +190,13 @@ section {
     padding: 100px 20px;
 }
 
+/* Portfolio Grid */
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+
 /* Pricing Section */
 .pricing-section {
     position: relative;
@@ -459,6 +466,13 @@ input:checked + .slider:before {
 }
 
 /* Responsive */
+@media (max-width: 900px) {
+    .portfolio-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+}
+
 @media (max-width: 768px) {
     .bg-text {
         font-size: 25vw;
@@ -471,6 +485,11 @@ input:checked + .slider:before {
     
     .contact-container {
         flex-direction: column;
+    }
+    
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
     }
     
     .navbar {

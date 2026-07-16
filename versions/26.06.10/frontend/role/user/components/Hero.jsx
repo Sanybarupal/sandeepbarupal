@@ -327,53 +327,61 @@ const Hero = () => {
                 
                 /* Mobile Responsiveness */
                 @media (max-width: 900px) {
-                    .hero-title {
-                        top: 18% !important;
-                        left: 5vw !important;
+                    .hero-section {
+                        height: auto !important;
+                        min-height: 100vh !important;
+                        display: flex !important;
+                        flex-direction: column !important;
+                        justify-content: flex-start !important;
+                        align-items: center !important;
+                        padding: 120px 20px 40px !important;
+                        text-align: center !important;
+                    }
+                    .hero-subtitle, .hero-title, .hero-portrait, .hero-contact, .hero-right {
+                        position: relative !important;
+                        top: auto !important;
+                        bottom: auto !important;
+                        left: auto !important;
+                        right: auto !important;
+                        transform: none !important;
                     }
                     .hero-subtitle {
-                        top: 12% !important;
-                        left: 5vw !important;
+                        margin-bottom: 20px !important;
                     }
-                    .hero-right p {
-                        display: none !important;
-                    }
-                    .hero-right > div:first-child {
-                        display: none !important;
-                    }
-                    .hero-right {
-                        bottom: 30px !important;
-                        right: 5vw !important;
-                        max-width: auto !important;
-                    }
-                    .hero-contact {
-                        bottom: 30px !important;
-                        left: 5vw !important;
-                    }
-                    .hero-social-tag {
-                        padding: 6px 10px !important;
-                        font-size: 11px !important;
-                    }
-                    .contact-link {
-                        font-size: 12px !important;
-                    }
-                }
-                
-                @media (max-width: 600px) {
-                    .hero-contact {
-                        display: none !important;
-                    }
-                    .hero-right {
-                        left: 0 !important;
-                        right: 0 !important;
-                        justify-content: center !important;
-                        align-items: center !important;
-                        width: 100% !important;
-                        bottom: 20px !important;
+                    .hero-title {
+                        font-size: clamp(40px, 12vw, 70px) !important;
+                        margin-bottom: 40px !important;
+                        text-align: center !important;
                     }
                     .hero-portrait {
-                        height: 75vh !important;
-                        width: 100vw !important;
+                        width: 100% !important;
+                        max-width: 350px !important;
+                        height: 50vh !important;
+                        margin-bottom: 40px !important;
+                    }
+                    .hero-contact {
+                        align-items: center !important;
+                        margin-bottom: 30px !important;
+                        gap: 16px !important;
+                    }
+                    .hero-right {
+                        align-items: center !important;
+                        max-width: 100% !important;
+                    }
+                    .hero-right p {
+                        display: block !important;
+                        margin-bottom: 25px !important;
+                        text-align: center !important;
+                    }
+                    .hero-right > div:first-child {
+                        display: none !important; /* Hide scroll line */
+                    }
+                    .hero-social-tag {
+                        padding: 8px 16px !important;
+                        font-size: 13px !important;
+                    }
+                    .contact-link {
+                        font-size: 15px !important;
                     }
                 }
             `}} />
