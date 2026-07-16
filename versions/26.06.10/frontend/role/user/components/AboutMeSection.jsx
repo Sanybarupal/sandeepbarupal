@@ -122,7 +122,7 @@ const AboutMeSection = () => {
                             {[
                                 { num: '50+', label: 'Projects' },
                                 { num: '30+', label: 'Happy Clients' },
-                                { num: '2+', label: 'Years Exp.' },
+                                { num: '4+', label: 'Years Exp.' },
                             ].map((s, i) => (
                                 <div key={i} data-aos="fade-up" data-aos-delay={200 + i * 100} style={{
                                 }}>

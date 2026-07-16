@@ -4,7 +4,7 @@ const StatsAndLogos = () => {
     const stats = [
         { number: '50+', label: 'Projects' },
         { number: '30+', label: 'Happy Clients' },
-        { number: '2+', label: 'Years Experience' },
+        { number: '4+', label: 'Years Experience' },
         { number: '100%', label: 'Client Satisfaction' },
     ];
 
