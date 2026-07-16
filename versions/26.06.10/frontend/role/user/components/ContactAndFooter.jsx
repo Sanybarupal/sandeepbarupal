@@ -4,69 +4,176 @@ const ContactAndFooter = () => {
     return (
         <section className="contact-footer-section" style={{ position: 'relative', zIndex: 1, width: '100%' }}>
 
-            {/* CTA Banner */}
-            <div data-aos="fade-up" style={{ padding: '80px 5vw', textAlign: 'center', position: 'relative' }}>
-                <h2 style={{
-                    fontSize: 'clamp(2.5rem, 4vw, 3.5rem)',
-                    marginBottom: '15px',
-                    fontWeight: '800',
-                    letterSpacing: '-1px',
-                    color: '#fff'
-                }}>
-                    Have a project in mind?
-                </h2>
-                <p style={{ color: 'rgba(255,255,255,0.6)', fontSize: '1.1rem', marginBottom: '40px', maxWidth: '600px', margin: '0 auto 40px', lineHeight: '1.6' }}>
-                    Let's collaborate to build something amazing. I'm currently available for freelance projects and new opportunities.
-                </p>
+            {/* Premium CTA Banner */}
+            <div className="premium-cta-wrapper" style={{ padding: '100px 5vw', position: 'relative', display: 'flex', justifyContent: 'center' }}>
+                
+                {/* Background ambient glows */}
+                <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', width: '80%', height: '80%', background: 'radial-gradient(circle, rgba(74, 222, 128, 0.1) 0%, transparent 70%)', pointerEvents: 'none', filter: 'blur(50px)', zIndex: 0 }} />
 
-                <div style={{
+                <div data-aos="fade-up" className="premium-cta-card" style={{
+                    position: 'relative',
+                    zIndex: 1,
+                    width: '100%',
+                    maxWidth: '1000px',
+                    background: 'rgba(20, 20, 20, 0.6)',
+                    backdropFilter: 'blur(20px)',
+                    WebkitBackdropFilter: 'blur(20px)',
+                    borderRadius: '32px',
+                    padding: '60px',
+                    border: '1px solid rgba(255, 255, 255, 0.08)',
+                    boxShadow: '0 30px 60px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.1)',
                     display: 'flex',
+                    flexDirection: 'column',
                     alignItems: 'center',
-                    borderRadius: '50px',
-                    padding: '8px',
-                    maxWidth: '500px',
-                    margin: '0 auto',
-                    border: '1px solid rgba(255, 255, 255, 0.1)',
-                    boxShadow: '0 15px 30px rgba(0,0,0,0.2)'
+                    textAlign: 'center',
+                    overflow: 'hidden',
+                    transition: 'border-color 0.4s ease'
                 }}>
-                    <i className="fa-regular fa-envelope" style={{ padding: '0 20px', color: 'rgba(255,255,255,0.5)', fontSize: '18px' }}></i>
-                    <input
-                        type="email"
-                        placeholder="Enter your email address..."
-                        style={{
-                            background: 'transparent',
-                            border: 'none',
-                            color: '#fff',
-                            outline: 'none',
-                            flex: 1,
-                            fontSize: '16px',
-                            padding: '12px 0'
-                        }}
-                    />
-                    <button style={{
-                        background: '#4ade80',
-                        color: '#000',
-                        border: 'none',
-                        borderRadius: '50px',
-                        padding: '16px 32px',
-                        fontWeight: '700',
-                        fontSize: '15px',
-                        cursor: 'pointer',
-                        transition: 'all 0.3s ease',
-                        boxShadow: '0 5px 15px rgba(74, 222, 128, 0.3)'
-                    }}
-                        onMouseEnter={(e) => {
-                            e.currentTarget.style.transform = 'translateY(-2px)';
-                            e.currentTarget.style.boxShadow = '0 8px 25px rgba(74, 222, 128, 0.5)';
-                        }}
-                        onMouseLeave={(e) => {
-                            e.currentTarget.style.transform = 'translateY(0)';
-                            e.currentTarget.style.boxShadow = '0 5px 15px rgba(74, 222, 128, 0.3)';
+                    
+                    {/* Inner glowing orb */}
+                    <div className="cta-glow-orb" style={{
+                        position: 'absolute', top: '-50px', left: '50%', transform: 'translateX(-50%)',
+                        width: '300px', height: '100px', background: 'rgba(74, 222, 128, 0.4)', filter: 'blur(60px)', borderRadius: '50%', pointerEvents: 'none'
+                    }}></div>
+
+                    {/* Badge */}
+                    <div style={{
+                        display: 'inline-flex', alignItems: 'center', gap: '8px',
+                        background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.1)',
+                        padding: '8px 20px', borderRadius: '30px', fontSize: '0.9rem', fontWeight: '600',
+                        color: '#4ade80', marginBottom: '30px', letterSpacing: '0.5px'
+                    }}>
+                        <span>📞</span> Let's Work Together
+                    </div>
+
+                    {/* Heading */}
+                    <h2 style={{
+                        fontSize: 'clamp(2.5rem, 5vw, 4rem)',
+                        fontWeight: '800',
+                        letterSpacing: '-1.5px',
+                        lineHeight: '1.1',
+                        marginBottom: '24px',
+                        background: 'linear-gradient(180deg, #ffffff 0%, #a0a0a0 100%)',
+                        WebkitBackgroundClip: 'text',
+                        WebkitTextFillColor: 'transparent',
+                    }}>
+                        Have a Project in Mind?<br />
+                        <span style={{ color: 'rgba(255,255,255,0.9)', WebkitTextFillColor: 'rgba(255,255,255,0.9)' }}>Let's Build Something Amazing.</span>
+                    </h2>
+
+                    {/* Description */}
+                    <p style={{
+                        color: 'rgba(255,255,255,0.6)',
+                        fontSize: '1.15rem',
+                        lineHeight: '1.7',
+                        maxWidth: '700px',
+                        marginBottom: '40px'
+                    }}>
+                        Whether you need a modern website, UI/UX design, a landing page, or a complete digital solution, I'm here to help. Book a free 30-minute discovery call and let's discuss your ideas, goals, and how we can turn them into reality.
+                    </p>
+
+                    {/* Features Grid */}
+                    <div style={{
+                        display: 'flex',
+                        flexWrap: 'wrap',
+                        justifyContent: 'center',
+                        gap: '15px 30px',
+                        marginBottom: '50px',
+                        maxWidth: '800px'
+                    }}>
+                        {['Free 30-Minute Consultation', 'UI/UX & Website Strategy', 'Fast Response', 'Transparent Communication', 'Available for Freelance & Remote Projects'].map((feature, idx) => (
+                            <div key={idx} style={{ display: 'flex', alignItems: 'center', gap: '8px', color: 'rgba(255,255,255,0.8)', fontSize: '0.95rem', fontWeight: '500' }}>
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#4ade80" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                {feature}
+                            </div>
+                        ))}
+                    </div>
+
+                    {/* Buttons */}
+                    <div style={{
+                        display: 'flex',
+                        gap: '20px',
+                        flexWrap: 'wrap',
+                        justifyContent: 'center',
+                        marginBottom: '25px',
+                        width: '100%'
+                    }}>
+                        {/* Primary Button */}
+                        <a href="mailto:sandeepaliens01@gmail.com" className="cta-primary-btn" style={{
+                            background: 'linear-gradient(135deg, #4ade80 0%, #10b981 100%)',
+                            color: '#000',
+                            textDecoration: 'none',
+                            padding: '16px 36px',
+                            borderRadius: '50px',
+                            fontWeight: '700',
+                            fontSize: '1.1rem',
+                            display: 'flex',
+                            alignItems: 'center',
+                            gap: '10px',
+                            transition: 'all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94)',
+                            boxShadow: '0 10px 25px -5px rgba(74, 222, 128, 0.4)',
+                            position: 'relative',
+                            overflow: 'hidden'
                         }}>
-                        Let's Talk
-                    </button>
+                            Book a Free Call
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ transition: 'transform 0.3s' }} className="btn-arrow"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                        </a>
+                        
+                        {/* Secondary Button */}
+                        <a href="mailto:sandeepaliens01@gmail.com" className="cta-secondary-btn" style={{
+                            background: 'rgba(255,255,255,0.03)',
+                            color: '#fff',
+                            textDecoration: 'none',
+                            padding: '16px 36px',
+                            borderRadius: '50px',
+                            fontWeight: '600',
+                            fontSize: '1.1rem',
+                            display: 'flex',
+                            alignItems: 'center',
+                            gap: '10px',
+                            border: '1px solid rgba(255,255,255,0.1)',
+                            transition: 'all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94)'
+                        }}>
+                            Send a Message
+                        </a>
+                    </div>
+
+                    {/* Bottom Note */}
+                    <div style={{
+                        display: 'flex',
+                        alignItems: 'center',
+                        gap: '8px',
+                        color: 'rgba(255,255,255,0.4)',
+                        fontSize: '0.85rem'
+                    }}>
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+                        No obligations. Just a friendly conversation about your project.
+                    </div>
                 </div>
             </div>
+
+            <style dangerouslySetInnerHTML={{ __html: `
+                .cta-primary-btn:hover {
+                    transform: translateY(-3px) scale(1.02);
+                    box-shadow: 0 15px 35px -5px rgba(74, 222, 128, 0.5) !important;
+                }
+                .cta-primary-btn:hover .btn-arrow {
+                    transform: translateX(4px);
+                }
+                .cta-secondary-btn:hover {
+                    background: rgba(255,255,255,0.08) !important;
+                    border-color: rgba(255,255,255,0.2) !important;
+                    transform: translateY(-3px);
+                }
+                .premium-cta-card:hover {
+                    border-color: rgba(74, 222, 128, 0.3) !important;
+                }
+                @media (max-width: 768px) {
+                    .premium-cta-card {
+                        padding: 40px 20px !important;
+                    }
+                }
+            `}} />
 
             {/* Footer */}
             <footer data-aos="fade-up" data-aos-offset="0" style={{
