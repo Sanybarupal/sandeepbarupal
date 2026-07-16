@@ -31,7 +31,7 @@ const ExperienceAndEducation = () => {
                                 <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
                             </svg>
                         </div>
-                        <h2 style={{ fontSize: '2rem', margin: 0, textTransform: 'uppercase', letterSpacing: '2px', fontWeight: '700', background: 'linear-gradient(90deg, #ffffff, #888888)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
+                        <h2 style={{ fontSize: '2rem', margin: 0, letterSpacing: '2px', fontWeight: '700', background: 'linear-gradient(90deg, #ffffff, #888888)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
                             Work Experience
                         </h2>
                     </div>
@@ -40,7 +40,7 @@ const ExperienceAndEducation = () => {
                         {/* Experience Item 1 */}
                         <div style={itemStyle} className="hover-scale">
                             <div style={{ display: 'flex', alignItems: 'center', gap: '25px' }}>
-                                <div style={{ width: '70px', height: '70px', borderRadius: '50%', border: '1px solid rgba(255,255,255,0.1)', display: 'flex', alignItems: 'center', justifyContent: 'center', overflow: 'hidden', background: '#000' }}>
+                                <div style={{ width: '70px', height: '70px', minWidth: '70px', minHeight: '70px', flexShrink: 0, borderRadius: '50%', border: '1px solid rgba(255,255,255,0.1)', display: 'flex', alignItems: 'center', justifyContent: 'center', overflow: 'hidden', background: '#000' }}>
                                     <img src={aliensLogo} alt="Aliens Company" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
                                 </div>
                                 <div>
@@ -54,7 +54,7 @@ const ExperienceAndEducation = () => {
                         {/* Experience Item 2 */}
                         <div style={itemStyle} className="hover-scale">
                             <div style={{ display: 'flex', alignItems: 'center', gap: '25px' }}>
-                                <div style={{ width: '70px', height: '70px', borderRadius: '50%', border: '1px solid rgba(255,255,255,0.1)', display: 'flex', alignItems: 'center', justifyContent: 'center', overflow: 'hidden', background: '#000' }}>
+                                <div style={{ width: '70px', height: '70px', minWidth: '70px', minHeight: '70px', flexShrink: 0, borderRadius: '50%', border: '1px solid rgba(255,255,255,0.1)', display: 'flex', alignItems: 'center', justifyContent: 'center', overflow: 'hidden', background: '#000' }}>
                                     <img src={aliensLogo} alt="Aliens School" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
                                 </div>
                                 <div>
@@ -76,7 +76,7 @@ const ExperienceAndEducation = () => {
                                 <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
                             </svg>
                         </div>
-                        <h2 style={{ fontSize: '2rem', margin: 0, textTransform: 'uppercase', letterSpacing: '2px', fontWeight: '700', background: 'linear-gradient(90deg, #ffffff, #888888)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
+                        <h2 style={{ fontSize: '2rem', margin: 0, letterSpacing: '2px', fontWeight: '700', background: 'linear-gradient(90deg, #ffffff, #888888)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
                             Education
                         </h2>
                     </div>
@@ -85,7 +85,7 @@ const ExperienceAndEducation = () => {
                         {/* Education Item 1 */}
                         <div style={itemStyle} className="hover-scale">
                             <div style={{ display: 'flex', alignItems: 'center', gap: '25px' }}>
-                                <div style={{ width: '70px', height: '70px', borderRadius: '50%', border: '1px solid rgba(255,255,255,0.1)', display: 'flex', alignItems: 'center', justifyContent: 'center', overflow: 'hidden', background: '#fff' }}>
+                                <div style={{ width: '70px', height: '70px', minWidth: '70px', minHeight: '70px', flexShrink: 0, borderRadius: '50%', border: '1px solid rgba(255,255,255,0.1)', display: 'flex', alignItems: 'center', justifyContent: 'center', overflow: 'hidden', background: '#fff' }}>
                                     <img src={mgsuLogo} alt="MGSU Bikaner" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
                                 </div>
                                 <div>
@@ -99,7 +99,7 @@ const ExperienceAndEducation = () => {
                         {/* Education Item 2 */}
                         <div style={itemStyle} className="hover-scale">
                             <div style={{ display: 'flex', alignItems: 'center', gap: '25px' }}>
-                                <div style={{ width: '70px', height: '70px', borderRadius: '50%', border: '1px solid rgba(255,255,255,0.1)', display: 'flex', alignItems: 'center', justifyContent: 'center', overflow: 'hidden', background: '#fff' }}>
+                                <div style={{ width: '70px', height: '70px', minWidth: '70px', minHeight: '70px', flexShrink: 0, borderRadius: '50%', border: '1px solid rgba(255,255,255,0.1)', display: 'flex', alignItems: 'center', justifyContent: 'center', overflow: 'hidden', background: '#fff' }}>
                                     <img src={mgsuLogo} alt="MGSU Bikaner" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
                                 </div>
                                 <div>

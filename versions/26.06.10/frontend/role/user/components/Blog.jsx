@@ -72,7 +72,7 @@ const Blog = () => {
         }}>
 
             {/* Main Content Grid */}
-            <div style={{
+            <div className="blog-grid" style={{
                 maxWidth: '1300px',
                 width: '100%',
                 margin: '0 auto',
@@ -229,7 +229,7 @@ const Blog = () => {
             </div>
 
             {/* Bottom Footer links mimicking the image */}
-            <div style={{
+            <div className="blog-footer" style={{
                 maxWidth: '1300px',
                 width: '100%',
                 margin: 'auto auto 0 auto',
@@ -262,24 +262,24 @@ const Blog = () => {
                 }
                 
                 @media (max-width: 1024px) {
-                    .page-section > div:nth-child(2) {
+                    .blog-grid {
                         grid-template-columns: 80px 1fr !important;
                     }
-                    .page-section > div:nth-child(2) > div:nth-child(3) {
+                    .blog-grid > div:nth-child(3) {
                         grid-column: 1 / -1;
                         border-left: none !important;
                         padding-left: 0 !important;
                         border-top: 1px solid rgba(255,255,255,0.05);
                     }
-                    .page-section > div:nth-child(3) {
+                    .blog-footer {
                         grid-template-columns: 1fr !important;
                     }
                 }
                 @media (max-width: 768px) {
-                    .page-section > div:nth-child(2) {
+                    .blog-grid {
                         grid-template-columns: 1fr !important;
                     }
-                    .page-section > div:nth-child(2) > div:nth-child(1) {
+                    .blog-grid > div:nth-child(1) {
                         flex-direction: row !important;
                         height: auto !important;
                         border-right: none !important;
@@ -287,11 +287,8 @@ const Blog = () => {
                         padding-top: 20px !important;
                         padding-bottom: 20px !important;
                     }
-                    .page-section > div:nth-child(2) > div:nth-child(2) {
+                    .blog-grid > div:nth-child(2) {
                         padding-right: 0 !important;
-                    }
-                    .page-section > div:nth-child(1) {
-                        display: none !important;
                     }
                 }
             `}} />

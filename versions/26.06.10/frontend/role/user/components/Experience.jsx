@@ -7,7 +7,7 @@ const Experience = () => {
             <div className="bg-text" style={{ top: '20%' }}></div>
 
             <div style={{ maxWidth: '1000px', margin: '0 auto', position: 'relative', zIndex: 1, width: '100%' }}>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '20px', marginBottom: '80px', justifyContent: 'center' }}>
+                <div className="work-journey-container" style={{ display: 'flex', alignItems: 'center', gap: '20px', marginBottom: '80px', justifyContent: 'center' }}>
                     <div style={{
                         width: '60px', height: '60px', borderRadius: '16px',
                         background: 'rgba(255,255,255,0.03)',
@@ -20,7 +20,7 @@ const Experience = () => {
                             <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
                         </svg>
                     </div>
-                    <h2 style={{
+                    <h2 className="work-journey-heading" style={{
                         fontSize: '3rem', margin: 0, textTransform: 'uppercase',
                         letterSpacing: '3px', fontWeight: '800',
                         background: 'linear-gradient(90deg, #ffffff, #00e5ff)',
@@ -32,7 +32,7 @@ const Experience = () => {
                 </div>
 
                 {/* Timeline Container */}
-                <div style={{ position: 'relative', paddingLeft: '40px' }}>
+                <div className="timeline-container" style={{ position: 'relative', paddingLeft: '40px' }}>
                     {/* Vertical Line */}
                     <div style={{
                         position: 'absolute',
@@ -49,7 +49,7 @@ const Experience = () => {
                         {/* Job 1 */}
                         <div style={{ position: 'relative' }}>
                             {/* Timeline Dot */}
-                            <div style={{
+                            <div className="timeline-dot" style={{
                                 position: 'absolute',
                                 left: '-46px',
                                 top: '40px',
@@ -155,7 +155,7 @@ const Experience = () => {
                         {/* Job 2 */}
                         <div style={{ position: 'relative' }}>
                             {/* Timeline Dot */}
-                            <div style={{
+                            <div className="timeline-dot" style={{
                                 position: 'absolute',
                                 left: '-46px',
                                 top: '40px',
@@ -231,6 +231,29 @@ const Experience = () => {
                     </div>
                 </div>
             </div>
+            
+            <style dangerouslySetInnerHTML={{
+                __html: `
+                @media (max-width: 768px) {
+                    .timeline-container {
+                        padding-left: 20px !important;
+                    }
+                    .timeline-dot {
+                        left: -26px !important;
+                    }
+                    .page-section {
+                        padding-top: 100px !important;
+                    }
+                    .work-journey-heading {
+                        font-size: 2rem !important;
+                        text-align: center;
+                    }
+                    .work-journey-container {
+                        flex-direction: column;
+                        gap: 10px !important;
+                    }
+                }
+            `}} />
         </section>
     );
 };

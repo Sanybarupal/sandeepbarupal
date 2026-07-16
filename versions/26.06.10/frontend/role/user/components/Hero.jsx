@@ -99,9 +99,9 @@ const Hero = () => {
                     {/* Base image */}
                     <img src={profilePic} alt="Sandeep Barupal" className="hero-img-base" />
                     {/* Slices */}
-                    <div className="hero-img-slice hero-img-slice-1" style={{ backgroundImage: `url(${profilePic})` }} />
-                    <div className="hero-img-slice hero-img-slice-2" style={{ backgroundImage: `url(${profilePic})` }} />
-                    <div className="hero-img-slice hero-img-slice-3" style={{ backgroundImage: `url(${profilePic})` }} />
+                    {[...Array(10)].map((_, i) => (
+                        <div key={i} className={`hero-img-slice hero-img-slice-${i + 1}`} style={{ backgroundImage: `url(${profilePic})` }} />
+                    ))}
                 </div>
                 {/* Seamless Fade-out gradient at the bottom */}
                 <div style={{
@@ -301,9 +301,16 @@ const Hero = () => {
                     transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
                     pointer-events: none;
                 }
-                .hero-img-slice-1 { clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%); }
-                .hero-img-slice-2 { clip-path: polygon(0 33%, 100% 33%, 100% 66%, 0 66%); }
-                .hero-img-slice-3 { clip-path: polygon(0 66%, 100% 66%, 100% 100%, 0 100%); }
+                .hero-img-slice-1 { clip-path: polygon(0 0, 100% 0, 100% 10%, 0 10%); }
+                .hero-img-slice-2 { clip-path: polygon(0 10%, 100% 10%, 100% 20%, 0 20%); }
+                .hero-img-slice-3 { clip-path: polygon(0 20%, 100% 20%, 100% 30%, 0 30%); }
+                .hero-img-slice-4 { clip-path: polygon(0 30%, 100% 30%, 100% 40%, 0 40%); }
+                .hero-img-slice-5 { clip-path: polygon(0 40%, 100% 40%, 100% 50%, 0 50%); }
+                .hero-img-slice-6 { clip-path: polygon(0 50%, 100% 50%, 100% 60%, 0 60%); }
+                .hero-img-slice-7 { clip-path: polygon(0 60%, 100% 60%, 100% 70%, 0 70%); }
+                .hero-img-slice-8 { clip-path: polygon(0 70%, 100% 70%, 100% 80%, 0 80%); }
+                .hero-img-slice-9 { clip-path: polygon(0 80%, 100% 80%, 100% 90%, 0 90%); }
+                .hero-img-slice-10 { clip-path: polygon(0 90%, 100% 90%, 100% 100%, 0 100%); }
 
                 .hero-portrait:hover .hero-img-base {
                     opacity: 0.6;
@@ -312,18 +319,16 @@ const Hero = () => {
                 .hero-portrait:hover .hero-img-slice {
                     opacity: 1;
                 }
-                .hero-portrait:hover .hero-img-slice-1 {
-                    transform: translateX(-15px);
-                    filter: drop-shadow(5px 0 0 rgba(74, 222, 128, 0.6));
-                }
-                .hero-portrait:hover .hero-img-slice-2 {
-                    transform: translateX(20px);
-                    filter: drop-shadow(-5px 0 0 rgba(255,0,100,0.5));
-                }
-                .hero-portrait:hover .hero-img-slice-3 {
-                    transform: translateX(-10px);
-                    filter: drop-shadow(5px 0 0 rgba(0,100,255,0.5));
-                }
+                .hero-portrait:hover .hero-img-slice-1 { transform: translateX(-15px); filter: drop-shadow(5px 0 0 rgba(74, 222, 128, 0.6)); }
+                .hero-portrait:hover .hero-img-slice-2 { transform: translateX(20px); filter: drop-shadow(-5px 0 0 rgba(255,0,100,0.5)); }
+                .hero-portrait:hover .hero-img-slice-3 { transform: translateX(-10px); filter: drop-shadow(5px 0 0 rgba(0,100,255,0.5)); }
+                .hero-portrait:hover .hero-img-slice-4 { transform: translateX(18px); filter: drop-shadow(-5px 0 0 rgba(74, 222, 128, 0.5)); }
+                .hero-portrait:hover .hero-img-slice-5 { transform: translateX(-22px); filter: drop-shadow(5px 0 0 rgba(255,0,100,0.4)); }
+                .hero-portrait:hover .hero-img-slice-6 { transform: translateX(12px); filter: drop-shadow(-5px 0 0 rgba(0,100,255,0.6)); }
+                .hero-portrait:hover .hero-img-slice-7 { transform: translateX(-19px); filter: drop-shadow(5px 0 0 rgba(74, 222, 128, 0.5)); }
+                .hero-portrait:hover .hero-img-slice-8 { transform: translateX(15px); filter: drop-shadow(-5px 0 0 rgba(255,0,100,0.5)); }
+                .hero-portrait:hover .hero-img-slice-9 { transform: translateX(-14px); filter: drop-shadow(5px 0 0 rgba(0,100,255,0.4)); }
+                .hero-portrait:hover .hero-img-slice-10 { transform: translateX(20px); filter: drop-shadow(-5px 0 0 rgba(74, 222, 128, 0.6)); }
                 
                 /* Mobile Responsiveness */
                 @media (max-width: 900px) {
