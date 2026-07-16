@@ -14,7 +14,7 @@ const ContactAndFooter = () => {
                     position: 'relative',
                     zIndex: 1,
                     width: '100%',
-                    maxWidth: '1000px',
+                    maxWidth: '1200px',
                     background: 'rgba(20, 20, 20, 0.6)',
                     backdropFilter: 'blur(20px)',
                     WebkitBackdropFilter: 'blur(20px)',
@@ -48,7 +48,7 @@ const ContactAndFooter = () => {
 
                     {/* Heading */}
                     <h2 style={{
-                        fontSize: 'clamp(2.5rem, 5vw, 4rem)',
+                        fontSize: 'clamp(2rem, 4vw, 3rem)',
                         fontWeight: '800',
                         letterSpacing: '-1.5px',
                         lineHeight: '1.1',

@@ -17,12 +17,13 @@
     font-family: 'Inter', sans-serif;
 }
 
-body {
+html, body {
     background-color: var(--bg-color);
     color: var(--text-main);
     overflow-x: hidden;
     position: relative;
     line-height: 1.5;
+    width: 100%;
 }
 
 /* Background Glow Effects */

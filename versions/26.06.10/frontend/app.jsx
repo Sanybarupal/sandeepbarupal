@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import ReactDOM from 'react-dom/client';
-import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Link, useLocation } from 'react-router-dom';
 import Home from './role/user/pages/home/index.jsx';
 import About from './role/user/pages/about/index.jsx';
 import Experience from './role/user/pages/experience/index.jsx';
@@ -45,8 +45,24 @@ const Navbar = () => {
     );
 };
 
+const RouteChangeTracker = () => {
+    const location = useLocation();
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+        if (window.AOS) {
+            setTimeout(() => {
+                window.AOS.refresh();
+            }, 100);
+        }
+    }, [location]);
+
+    return null;
+};
+
 const App = () => (
     <BrowserRouter>
+        <RouteChangeTracker />
         <div className="bg-glow glow-blue"></div>
         <div className="bg-glow glow-bottom-blue"></div>
         <div className="bg-glow glow-green"></div>
