@@ -45,7 +45,7 @@ const StatsAndLogos = () => {
             <div style={{ maxWidth: '1100px', margin: '0 auto', position: 'relative', zIndex: 1 }}>
                 
                 {/* Trusted By Section */}
-                <div style={{ textAlign: 'center', marginBottom: '100px' }}>
+                <div data-aos="fade-up" style={{ textAlign: 'center', marginBottom: '100px' }}>
                     <p style={{ 
                         color: 'rgba(255,255,255,0.3)', 
                         fontSize: '11px', 
@@ -94,7 +94,7 @@ const StatsAndLogos = () => {
                     gap: '20px' 
                 }}>
                     {stats.map((stat, i) => (
-                        <div key={i} style={{ 
+                        <div key={i} data-aos="fade-up" data-aos-delay={i * 100} style={{ 
                             textAlign: 'center', 
                             padding: '45px 20px',
                             background: 'rgba(255, 255, 255, 0.02)',

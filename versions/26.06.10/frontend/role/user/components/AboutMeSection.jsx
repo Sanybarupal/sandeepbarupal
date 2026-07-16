@@ -1,23 +1,7 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React from 'react';
 import profilePic from '../../../assets/img/profile.png';
 
 const AboutMeSection = () => {
-    const sectionRef = useRef(null);
-    const [isVisible, setIsVisible] = useState(false);
-
-    useEffect(() => {
-        const observer = new IntersectionObserver(
-            ([entry]) => {
-                if (entry.isIntersecting) {
-                    setIsVisible(true);
-                }
-            },
-            { threshold: 0.15 }
-        );
-        if (sectionRef.current) observer.observe(sectionRef.current);
-        return () => observer.disconnect();
-    }, []);
-
     const tools = [
         { name: 'React', color: '#61dafb' },
         { name: 'Figma', color: '#f24e1e' },
@@ -31,7 +15,6 @@ const AboutMeSection = () => {
 
     return (
         <section
-            ref={sectionRef}
             className="about-me-section"
             style={{
                 padding: '120px 20px',
@@ -57,11 +40,8 @@ const AboutMeSection = () => {
             <div style={{ maxWidth: '1200px', margin: '0 auto', position: 'relative', zIndex: 1 }}>
 
                 {/* ── Section Header ── */}
-                <div style={{
+                <div data-aos="fade-up" style={{
                     marginBottom: '80px',
-                    opacity: isVisible ? 1 : 0,
-                    transform: isVisible ? 'translateY(0)' : 'translateY(30px)',
-                    transition: 'all 0.8s cubic-bezier(0.16, 1, 0.3, 1)',
                 }}>
                     <div style={{ display: 'flex', alignItems: 'center', gap: '15px', marginBottom: '20px' }}>
                         <div style={{
@@ -101,13 +81,10 @@ const AboutMeSection = () => {
                     marginBottom: '100px',
                 }}>
                     {/* Left: About text */}
-                    <div style={{
+                    <div data-aos="fade-right" data-aos-delay="200" style={{
                         display: 'flex',
                         flexDirection: 'column',
                         gap: '24px',
-                        opacity: isVisible ? 1 : 0,
-                        transform: isVisible ? 'translateX(0)' : 'translateX(-40px)',
-                        transition: 'all 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.2s',
                     }}>
                         <p style={{
                             margin: 0,
@@ -147,10 +124,7 @@ const AboutMeSection = () => {
                                 { num: '30+', label: 'Happy Clients' },
                                 { num: '2+', label: 'Years Exp.' },
                             ].map((s, i) => (
-                                <div key={i} style={{
-                                    opacity: isVisible ? 1 : 0,
-                                    transform: isVisible ? 'translateY(0)' : 'translateY(20px)',
-                                    transition: `all 0.6s cubic-bezier(0.16, 1, 0.3, 1) ${0.6 + i * 0.15}s`,
+                                <div key={i} data-aos="fade-up" data-aos-delay={200 + i * 100} style={{
                                 }}>
                                     <div style={{
                                         fontSize: '2rem',
@@ -175,11 +149,8 @@ const AboutMeSection = () => {
                     </div>
 
                     {/* Right: Portrait image */}
-                    <div style={{
+                    <div data-aos="fade-left" data-aos-delay="300" style={{
                         position: 'relative',
-                        opacity: isVisible ? 1 : 0,
-                        transform: isVisible ? 'translateX(0) scale(1)' : 'translateX(40px) scale(0.95)',
-                        transition: 'all 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.3s',
                     }} className="about-portrait-container">
                         <div style={{
                             position: 'relative',
@@ -235,10 +206,7 @@ const AboutMeSection = () => {
                 </div>
 
                 {/* ── Tools & Technologies ── */}
-                <div style={{
-                    opacity: isVisible ? 1 : 0,
-                    transform: isVisible ? 'translateY(0)' : 'translateY(20px)',
-                    transition: 'all 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.5s',
+                <div data-aos="fade-up" style={{
                 }}>
                     <div style={{
                         display: 'flex',
@@ -264,6 +232,8 @@ const AboutMeSection = () => {
                         {tools.map((tool, i) => (
                             <span
                                 key={i}
+                                data-aos="fade-up"
+                                data-aos-delay={i * 50}
                                 className="about-tool-tag"
                                 style={{
                                     padding: '12px 24px',
@@ -275,9 +245,6 @@ const AboutMeSection = () => {
                                     border: '1px solid rgba(255,255,255,0.08)',
                                     transition: 'all 0.3s ease',
                                     cursor: 'default',
-                                    opacity: isVisible ? 1 : 0,
-                                    transform: isVisible ? 'translateY(0)' : 'translateY(15px)',
-                                    transitionDelay: `${0.6 + i * 0.06}s`,
                                 }}
                             >
                                 {tool.name}

@@ -45,7 +45,7 @@ const SocialProof = () => {
                 
                 {/* Why Hire Me */}
                 <div>
-                    <div style={{ display: 'flex', alignItems: 'center', gap: '15px', marginBottom: '50px' }}>
+                    <div data-aos="fade-up" style={{ display: 'flex', alignItems: 'center', gap: '15px', marginBottom: '50px' }}>
                         <h2 style={{ fontSize: '2rem', margin: 0, textTransform: 'uppercase', letterSpacing: '2px', fontWeight: '800', background: 'linear-gradient(90deg, #fff, #a0a0a0)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
                             Why Hire Me?
                         </h2>
@@ -54,7 +54,7 @@ const SocialProof = () => {
                     
                     <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '30px' }}>
                         {benefits.map((benefit, i) => (
-                            <div key={i} className="hire-card" style={{ 
+                            <div key={i} data-aos="fade-up" data-aos-delay={i * 100} className="hire-card" style={{ 
                                 padding: '35px 30px', 
                                 display: 'flex', 
                                 gap: '20px', 
@@ -114,7 +114,7 @@ const SocialProof = () => {
 
                 {/* Testimonials */}
                 <div>
-                    <div style={{ display: 'flex', alignItems: 'center', gap: '15px', marginBottom: '50px' }}>
+                    <div data-aos="fade-up" style={{ display: 'flex', alignItems: 'center', gap: '15px', marginBottom: '50px' }}>
                         <h2 style={{ fontSize: '2rem', margin: 0, textTransform: 'uppercase', letterSpacing: '2px', fontWeight: '800', background: 'linear-gradient(90deg, #fff, #a0a0a0)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
                             What Clients Say
                         </h2>
@@ -123,7 +123,7 @@ const SocialProof = () => {
                     
                     <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '30px' }}>
                         {testimonials.map((item, i) => (
-                            <div key={i} className="testimonial-card" style={{ 
+                            <div key={i} data-aos="fade-up" data-aos-delay={i * 100} className="testimonial-card" style={{ 
                                 padding: '40px',
                                 background: 'rgba(255,255,255,0.015)',
                                 backdropFilter: 'blur(10px)',

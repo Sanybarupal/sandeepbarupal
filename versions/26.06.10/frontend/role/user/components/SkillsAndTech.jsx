@@ -121,13 +121,13 @@ const SkillsAndTech = () => {
                 
                 {/* Skills */}
                 <div>
-                    <h2 style={{ fontSize: '1.5rem', marginBottom: '40px', textTransform: 'uppercase', letterSpacing: '1px' }}>
+                    <h2 data-aos="fade-right" style={{ fontSize: '1.5rem', marginBottom: '40px', textTransform: 'uppercase', letterSpacing: '1px' }}>
                         Skills & Technologies
                     </h2>
                     
                     <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '40px' }}>
                         {categories.map((category, i) => (
-                            <div key={i}>
+                            <div key={i} data-aos="fade-up" data-aos-delay={i * 50}>
                                 <h3 style={{ fontSize: '1.1rem', marginBottom: '20px', color: '#a0a0a0', display: 'flex', alignItems: 'center', gap: '10px', fontWeight: '500' }}>
                                     <span style={{ width: '6px', height: '6px', borderRadius: '50%', background: '#2563eb', display: 'inline-block' }}></span>
                                     {category.title}

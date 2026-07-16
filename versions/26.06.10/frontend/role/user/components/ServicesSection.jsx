@@ -1,21 +1,6 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React from 'react';
 
 const ServicesSection = () => {
-    const sectionRef = useRef(null);
-    const [isVisible, setIsVisible] = useState(false);
-
-    useEffect(() => {
-        const observer = new IntersectionObserver(
-            ([entry]) => {
-                if (entry.isIntersecting) {
-                    setIsVisible(true);
-                }
-            },
-            { threshold: 0.15 }
-        );
-        if (sectionRef.current) observer.observe(sectionRef.current);
-        return () => observer.disconnect();
-    }, []);
 
     const expertise = [
         { icon: '🎨', title: 'UI/UX Design', desc: 'Creating intuitive, beautiful interfaces that users love using Figma & Framer. Focus on seamless user journeys.' },
@@ -28,7 +13,6 @@ const ServicesSection = () => {
 
     return (
         <section
-            ref={sectionRef}
             className="services-section"
             style={{
                 padding: '120px 20px',
@@ -42,11 +26,8 @@ const ServicesSection = () => {
             <div style={{ maxWidth: '1200px', margin: '0 auto', position: 'relative', zIndex: 1 }}>
 
                 {/* ── Section Header ── */}
-                <div style={{
+                <div data-aos="fade-up" style={{
                     marginBottom: '60px',
-                    opacity: isVisible ? 1 : 0,
-                    transform: isVisible ? 'translateY(0)' : 'translateY(20px)',
-                    transition: 'all 0.6s cubic-bezier(0.16, 1, 0.3, 1)',
                 }}>
                     <div style={{ display: 'flex', alignItems: 'center', gap: '15px', marginBottom: '20px' }}>
                         <div style={{ width: '40px', height: '2px', background: '#4ade80' }} />
@@ -82,6 +63,8 @@ const ServicesSection = () => {
                     {expertise.map((item, i) => (
                         <div
                             key={i}
+                            data-aos="fade-up"
+                            data-aos-delay={i * 100}
                             className="expertise-service-card"
                             style={{
                                 padding: '40px',
@@ -91,9 +74,6 @@ const ServicesSection = () => {
                                 backdropFilter: 'blur(10px)',
                                 transition: 'all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275)',
                                 cursor: 'pointer',
-                                opacity: isVisible ? 1 : 0,
-                                transform: isVisible ? 'translateY(0)' : 'translateY(40px)',
-                                transitionDelay: `${0.2 + i * 0.1}s`,
                                 position: 'relative',
                                 overflow: 'hidden'
                             }}

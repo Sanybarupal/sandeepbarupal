@@ -14,13 +14,13 @@ const Portfolio = () => {
         <section className="portfolio-section" style={{ padding: '80px 20px', position: 'relative', zIndex: 1 }}>
             <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
                 
-                <h2 style={{ fontSize: '1.5rem', marginBottom: '40px', textTransform: 'uppercase', letterSpacing: '1px' }}>
+                <h2 data-aos="fade-right" style={{ fontSize: '1.5rem', marginBottom: '40px', textTransform: 'uppercase', letterSpacing: '1px' }}>
                     Featured Projects
                 </h2>
                 
-                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '40px' }}>
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '40px' }}>
                     {projects.map((project, i) => (
-                        <div key={i} className="card glass" style={{ display: 'flex', flexDirection: 'column', height: '100%', padding: '0', overflow: 'hidden' }}>
+                        <div key={i} data-aos="fade-up" data-aos-delay={i * 100} className="card glass" style={{ display: 'flex', flexDirection: 'column', height: '100%', padding: '0', overflow: 'hidden' }}>
                             <div style={{ height: '220px', background: 'rgba(255,255,255,0.05)', position: 'relative', overflow: 'hidden' }}>
                                 <img 
                                     src={`https://picsum.photos/seed/${i + 15}/800/600`} 

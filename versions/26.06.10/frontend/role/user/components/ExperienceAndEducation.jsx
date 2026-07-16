@@ -20,10 +20,10 @@ const ExperienceAndEducation = () => {
 
     return (
         <section className="timeline-section" style={{ padding: '80px 20px', position: 'relative', zIndex: 1, width: '100%' }}>
-            <div data-aos="fade-up" data-aos-duration="1000" style={{ maxWidth: '1200px', margin: '0 auto', display: 'flex', flexDirection: 'column', gap: '80px', width: '100%' }}>
+            <div data-aos="fade-up" style={{ maxWidth: '1200px', margin: '0 auto', display: 'flex', flexDirection: 'column', gap: '80px', width: '100%' }}>
                 
                 {/* Work Experience */}
-                <div data-aos="fade-right" data-aos-delay="200" style={{ width: '100%' }}>
+                <div data-aos="fade-right" style={{ width: '100%' }}>
                     <div style={{ display: 'flex', alignItems: 'center', gap: '15px', marginBottom: '40px' }}>
                         <div style={{ width: '45px', height: '45px', borderRadius: '12px', background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.1)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
@@ -68,7 +68,7 @@ const ExperienceAndEducation = () => {
                 </div>
 
                 {/* Education */}
-                <div style={{ width: '100%' }}>
+                <div data-aos="fade-left" style={{ width: '100%' }}>
                     <div style={{ display: 'flex', alignItems: 'center', gap: '15px', marginBottom: '40px' }}>
                         <div style={{ width: '45px', height: '45px', borderRadius: '12px', background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.1)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">

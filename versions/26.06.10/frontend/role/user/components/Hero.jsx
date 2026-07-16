@@ -324,6 +324,58 @@ const Hero = () => {
                     transform: translateX(-10px);
                     filter: drop-shadow(5px 0 0 rgba(0,100,255,0.5));
                 }
+                
+                /* Mobile Responsiveness */
+                @media (max-width: 900px) {
+                    .hero-title {
+                        top: 18% !important;
+                        left: 5vw !important;
+                    }
+                    .hero-subtitle {
+                        top: 12% !important;
+                        left: 5vw !important;
+                    }
+                    .hero-right p {
+                        display: none !important;
+                    }
+                    .hero-right > div:first-child {
+                        display: none !important;
+                    }
+                    .hero-right {
+                        bottom: 30px !important;
+                        right: 5vw !important;
+                        max-width: auto !important;
+                    }
+                    .hero-contact {
+                        bottom: 30px !important;
+                        left: 5vw !important;
+                    }
+                    .hero-social-tag {
+                        padding: 6px 10px !important;
+                        font-size: 11px !important;
+                    }
+                    .contact-link {
+                        font-size: 12px !important;
+                    }
+                }
+                
+                @media (max-width: 600px) {
+                    .hero-contact {
+                        display: none !important;
+                    }
+                    .hero-right {
+                        left: 0 !important;
+                        right: 0 !important;
+                        justify-content: center !important;
+                        align-items: center !important;
+                        width: 100% !important;
+                        bottom: 20px !important;
+                    }
+                    .hero-portrait {
+                        height: 75vh !important;
+                        width: 100vw !important;
+                    }
+                }
             `}} />
         </section >
     );

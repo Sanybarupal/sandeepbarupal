@@ -5,7 +5,7 @@ const ContactAndFooter = () => {
         <section className="contact-footer-section" style={{ position: 'relative', zIndex: 1, width: '100%' }}>
 
             {/* CTA Banner */}
-            <div style={{ padding: '80px 5vw', textAlign: 'center', position: 'relative' }}>
+            <div data-aos="fade-up" style={{ padding: '80px 5vw', textAlign: 'center', position: 'relative' }}>
                 <h2 style={{
                     fontSize: 'clamp(2.5rem, 4vw, 3.5rem)',
                     marginBottom: '15px',
@@ -69,7 +69,7 @@ const ContactAndFooter = () => {
             </div>
 
             {/* Footer */}
-            <footer style={{
+            <footer data-aos="fade-up" data-aos-offset="0" style={{
                 padding: '80px 5vw 40px',
                 width: '100%',
                 borderTop: '1px solid rgba(255, 255, 255, 0.05)',
