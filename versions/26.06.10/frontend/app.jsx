@@ -32,13 +32,13 @@ const Navbar = () => {
             <ul className={`nav-links ${isOpen ? 'active' : ''}`}>
                 {['Home', 'About', 'Experience', 'Service', 'Blog', 'Contact'].map(item => (
                     <li key={item}>
-                        <Link 
-                            to={item === 'Home' ? '/' : `/${item.toLowerCase()}`} 
+                        <a 
+                            href={item === 'Home' ? '/' : `/${item.toLowerCase()}`} 
                             onClick={() => setIsOpen(false)}
                             className="nav-item"
                         >
                             {item}
-                        </Link>
+                        </a>
                     </li>
                 ))}
             </ul>
