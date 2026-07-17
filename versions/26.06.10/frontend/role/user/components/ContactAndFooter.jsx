@@ -19,7 +19,7 @@ const ContactAndFooter = () => {
                     backdropFilter: 'blur(20px)',
                     WebkitBackdropFilter: 'blur(20px)',
                     borderRadius: '32px',
-                    padding: '60px',
+                    padding: '50px 40px',
                     border: '1px solid rgba(255, 255, 255, 0.08)',
                     boxShadow: '0 30px 60px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.1)',
                     display: 'flex',
@@ -41,7 +41,7 @@ const ContactAndFooter = () => {
                         display: 'inline-flex', alignItems: 'center', gap: '8px',
                         background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.1)',
                         padding: '8px 20px', borderRadius: '30px', fontSize: '0.9rem', fontWeight: '600',
-                        color: '#4ade80', marginBottom: '30px', letterSpacing: '0.5px'
+                        color: '#4ade80', marginBottom: '20px', letterSpacing: '0.5px'
                     }}>
                         <span>📞</span> Let's Work Together
                     </div>
@@ -52,7 +52,7 @@ const ContactAndFooter = () => {
                         fontWeight: '800',
                         letterSpacing: '-1.5px',
                         lineHeight: '1.1',
-                        marginBottom: '24px',
+                        marginBottom: '16px',
                         background: 'linear-gradient(180deg, #ffffff 0%, #a0a0a0 100%)',
                         WebkitBackgroundClip: 'text',
                         WebkitTextFillColor: 'transparent',
@@ -67,9 +67,9 @@ const ContactAndFooter = () => {
                         fontSize: '1.15rem',
                         lineHeight: '1.7',
                         maxWidth: '700px',
-                        marginBottom: '40px'
+                        marginBottom: '25px'
                     }}>
-                        Whether you need a modern website, UI/UX design, a landing page, or a complete digital solution, I'm here to help. Book a free 30-minute discovery call and let's discuss your ideas, goals, and how we can turn them into reality.
+                        Let's collaborate to build a modern, high-performing digital experience. Book a free discovery call to discuss your ideas, goals, and how we can turn them into reality.
                     </p>
 
                     {/* Features Grid */}
@@ -77,8 +77,8 @@ const ContactAndFooter = () => {
                         display: 'flex',
                         flexWrap: 'wrap',
                         justifyContent: 'center',
-                        gap: '15px 30px',
-                        marginBottom: '50px',
+                        gap: '12px 24px',
+                        marginBottom: '35px',
                         maxWidth: '800px'
                     }}>
                         {['Free 30-Minute Consultation', 'UI/UX & Website Strategy', 'Fast Response', 'Transparent Communication', 'Available for Freelance & Remote Projects'].map((feature, idx) => (
@@ -95,7 +95,7 @@ const ContactAndFooter = () => {
                         gap: '20px',
                         flexWrap: 'wrap',
                         justifyContent: 'center',
-                        marginBottom: '25px',
+                        marginBottom: '20px',
                         width: '100%'
                     }}>
                         {/* Primary Button */}
