@@ -15,108 +15,83 @@ const ContactAndFooter = () => {
                     zIndex: 1,
                     width: '100%',
                     maxWidth: '1200px',
-                    background: 'rgba(20, 20, 20, 0.6)',
+                    background: 'linear-gradient(145deg, rgba(20, 20, 20, 0.8) 0%, rgba(10, 25, 15, 0.9) 100%)',
                     backdropFilter: 'blur(20px)',
                     WebkitBackdropFilter: 'blur(20px)',
-                    borderRadius: '32px',
-                    padding: '50px 40px',
-                    border: '1px solid rgba(255, 255, 255, 0.08)',
-                    boxShadow: '0 30px 60px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.1)',
+                    borderRadius: '40px',
+                    padding: '70px 60px',
+                    border: '1px solid rgba(255, 255, 255, 0.1)',
+                    boxShadow: '0 30px 60px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.1)',
                     display: 'flex',
-                    flexDirection: 'column',
+                    justifyContent: 'space-between',
                     alignItems: 'center',
-                    textAlign: 'center',
                     overflow: 'hidden',
+                    gap: '40px',
                     transition: 'border-color 0.4s ease'
                 }}>
                     
                     {/* Inner glowing orb */}
                     <div className="cta-glow-orb" style={{
-                        position: 'absolute', top: '-50px', left: '50%', transform: 'translateX(-50%)',
-                        width: '300px', height: '100px', background: 'rgba(74, 222, 128, 0.4)', filter: 'blur(60px)', borderRadius: '50%', pointerEvents: 'none'
+                        position: 'absolute', bottom: '-150px', right: '-100px',
+                        width: '500px', height: '500px', background: 'radial-gradient(circle, rgba(74, 222, 128, 0.15) 0%, transparent 70%)', borderRadius: '50%', pointerEvents: 'none'
                     }}></div>
 
-                    {/* Badge */}
-                    <div style={{
-                        display: 'inline-flex', alignItems: 'center', gap: '8px',
-                        background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.1)',
-                        padding: '8px 20px', borderRadius: '30px', fontSize: '0.9rem', fontWeight: '600',
-                        color: '#4ade80', marginBottom: '20px', letterSpacing: '0.5px'
-                    }}>
-                        <span>📞</span> Let's Work Together
+                    <div className="cta-left" style={{ flex: '1', maxWidth: '600px', textAlign: 'left', zIndex: 1 }}>
+                        {/* Badge */}
+                        <div style={{
+                            display: 'inline-flex', alignItems: 'center', gap: '10px',
+                            background: 'rgba(74, 222, 128, 0.1)', border: '1px solid rgba(74, 222, 128, 0.2)',
+                            padding: '10px 24px', borderRadius: '30px', fontSize: '0.9rem', fontWeight: '600',
+                            color: '#4ade80', marginBottom: '25px', letterSpacing: '0.5px'
+                        }}>
+                            <span style={{ display: 'flex', width: '8px', height: '8px', borderRadius: '50%', background: '#4ade80', boxShadow: '0 0 10px #4ade80' }}></span>
+                            Available for New Projects
+                        </div>
+
+                        {/* Heading */}
+                        <h2 style={{
+                            fontSize: 'clamp(2.5rem, 5vw, 3.5rem)',
+                            fontWeight: '800',
+                            letterSpacing: '-1.5px',
+                            lineHeight: '1.1',
+                            marginBottom: '20px',
+                            background: 'linear-gradient(180deg, #ffffff 0%, #a0a0a0 100%)',
+                            WebkitBackgroundClip: 'text',
+                            WebkitTextFillColor: 'transparent',
+                        }}>
+                            Let's build something <span style={{ color: '#4ade80', WebkitTextFillColor: '#4ade80' }}>amazing</span> together.
+                        </h2>
+
+                        {/* Description */}
+                        <p style={{
+                            color: 'rgba(255,255,255,0.6)',
+                            fontSize: '1.15rem',
+                            lineHeight: '1.7',
+                            marginBottom: '0'
+                        }}>
+                            Ready to bring your ideas to life? Book a free discovery call and let's discuss how we can turn your vision into a modern, high-performing digital experience.
+                        </p>
                     </div>
 
-                    {/* Heading */}
-                    <h2 style={{
-                        fontSize: 'clamp(2rem, 4vw, 3rem)',
-                        fontWeight: '800',
-                        letterSpacing: '-1.5px',
-                        lineHeight: '1.1',
-                        marginBottom: '16px',
-                        background: 'linear-gradient(180deg, #ffffff 0%, #a0a0a0 100%)',
-                        WebkitBackgroundClip: 'text',
-                        WebkitTextFillColor: 'transparent',
-                    }}>
-                        Have a Project in Mind?<br />
-                        <span style={{ color: 'rgba(255,255,255,0.9)', WebkitTextFillColor: 'rgba(255,255,255,0.9)' }}>Let's Build Something Amazing.</span>
-                    </h2>
-
-                    {/* Description */}
-                    <p style={{
-                        color: 'rgba(255,255,255,0.6)',
-                        fontSize: '1.15rem',
-                        lineHeight: '1.7',
-                        maxWidth: '700px',
-                        marginBottom: '25px'
-                    }}>
-                        Let's collaborate to build a modern, high-performing digital experience. Book a free discovery call to discuss your ideas, goals, and how we can turn them into reality.
-                    </p>
-
-                    {/* Features Grid */}
-                    <div style={{
-                        display: 'flex',
-                        flexWrap: 'wrap',
-                        justifyContent: 'center',
-                        gap: '12px 24px',
-                        marginBottom: '35px',
-                        maxWidth: '800px'
-                    }}>
-                        {['Free 30-Minute Consultation', 'UI/UX & Website Strategy', 'Fast Response', 'Transparent Communication', 'Available for Freelance & Remote Projects'].map((feature, idx) => (
-                            <div key={idx} style={{ display: 'flex', alignItems: 'center', gap: '8px', color: 'rgba(255,255,255,0.8)', fontSize: '0.95rem', fontWeight: '500' }}>
-                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#4ade80" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                                {feature}
-                            </div>
-                        ))}
-                    </div>
-
-                    {/* Buttons */}
-                    <div style={{
-                        display: 'flex',
-                        gap: '20px',
-                        flexWrap: 'wrap',
-                        justifyContent: 'center',
-                        marginBottom: '20px',
-                        width: '100%'
-                    }}>
+                    <div className="cta-right" style={{ display: 'flex', flexDirection: 'column', gap: '15px', zIndex: 1, minWidth: '250px' }}>
                         {/* Primary Button */}
                         <a href="mailto:sandeepaliens01@gmail.com" className="cta-primary-btn" style={{
-                            background: 'linear-gradient(135deg, #4ade80 0%, #10b981 100%)',
+                            background: '#4ade80',
                             color: '#000',
                             textDecoration: 'none',
-                            padding: '16px 36px',
-                            borderRadius: '50px',
+                            padding: '18px 40px',
+                            borderRadius: '100px',
                             fontWeight: '700',
                             fontSize: '1.1rem',
                             display: 'flex',
                             alignItems: 'center',
-                            gap: '10px',
+                            justifyContent: 'center',
+                            gap: '12px',
                             transition: 'all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94)',
-                            boxShadow: '0 10px 25px -5px rgba(74, 222, 128, 0.4)',
-                            position: 'relative',
-                            overflow: 'hidden'
+                            boxShadow: '0 15px 30px -5px rgba(74, 222, 128, 0.3)',
                         }}>
-                            Book a Free Call
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ transition: 'transform 0.3s' }} className="btn-arrow"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                            Start a Project
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="btn-arrow" style={{ transition: 'transform 0.3s' }}><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
                         </a>
                         
                         {/* Secondary Button */}
@@ -124,12 +99,13 @@ const ContactAndFooter = () => {
                             background: 'rgba(255,255,255,0.03)',
                             color: '#fff',
                             textDecoration: 'none',
-                            padding: '16px 36px',
-                            borderRadius: '50px',
+                            padding: '18px 40px',
+                            borderRadius: '100px',
                             fontWeight: '600',
                             fontSize: '1.1rem',
                             display: 'flex',
                             alignItems: 'center',
+                            justifyContent: 'center',
                             gap: '10px',
                             border: '1px solid rgba(255,255,255,0.1)',
                             transition: 'all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94)'
@@ -137,25 +113,13 @@ const ContactAndFooter = () => {
                             Send a Message
                         </a>
                     </div>
-
-                    {/* Bottom Note */}
-                    <div style={{
-                        display: 'flex',
-                        alignItems: 'center',
-                        gap: '8px',
-                        color: 'rgba(255,255,255,0.4)',
-                        fontSize: '0.85rem'
-                    }}>
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
-                        No obligations. Just a friendly conversation about your project.
-                    </div>
                 </div>
             </div>
 
             <style dangerouslySetInnerHTML={{ __html: `
                 .cta-primary-btn:hover {
                     transform: translateY(-3px) scale(1.02);
-                    box-shadow: 0 15px 35px -5px rgba(74, 222, 128, 0.5) !important;
+                    box-shadow: 0 20px 40px -5px rgba(74, 222, 128, 0.5) !important;
                 }
                 .cta-primary-btn:hover .btn-arrow {
                     transform: translateX(4px);
@@ -166,23 +130,27 @@ const ContactAndFooter = () => {
                     transform: translateY(-3px);
                 }
                 .premium-cta-card:hover {
-                    border-color: rgba(74, 222, 128, 0.3) !important;
+                    border-color: rgba(74, 222, 128, 0.4) !important;
                 }
-                @media (max-width: 768px) {
-                    .premium-cta-wrapper {
-                        padding: 60px 15px !important;
-                    }
+                @media (max-width: 900px) {
                     .premium-cta-card {
-                        padding: 40px 20px !important;
-                        border-radius: 24px !important;
+                        flex-direction: column !important;
+                        text-align: center !important;
+                        padding: 50px 30px !important;
+                        border-radius: 32px !important;
+                        gap: 40px !important;
                     }
-                    .premium-cta-card p {
-                        font-size: 1rem !important;
-                        line-height: 1.6 !important;
+                    .cta-left {
+                        text-align: center !important;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                    }
+                    .cta-right {
+                        width: 100%;
                     }
                     .cta-primary-btn, .cta-secondary-btn {
                         width: 100%;
-                        justify-content: center;
                     }
                 }
             `}} />
