@@ -61,7 +61,20 @@ const RouteChangeTracker = () => {
     return null;
 };
 
-const App = () => (
+const App = () => {
+    useEffect(() => {
+        if (window.AOS) {
+            window.AOS.init({
+                duration: 800,
+                once: false,
+                offset: 100,
+                easing: 'ease-in-out',
+                disable: 'mobile'
+            });
+        }
+    }, []);
+
+    return (
     <BrowserRouter>
         <RouteChangeTracker />
         <div className="bg-glow glow-blue"></div>
@@ -84,7 +97,8 @@ const App = () => (
             <ContactAndFooter />
         </main>
     </BrowserRouter>
-);
+    );
+};
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
