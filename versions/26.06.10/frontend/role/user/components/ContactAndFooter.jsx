@@ -169,8 +169,20 @@ const ContactAndFooter = () => {
                     border-color: rgba(74, 222, 128, 0.3) !important;
                 }
                 @media (max-width: 768px) {
+                    .premium-cta-wrapper {
+                        padding: 60px 15px !important;
+                    }
                     .premium-cta-card {
                         padding: 40px 20px !important;
+                        border-radius: 24px !important;
+                    }
+                    .premium-cta-card p {
+                        font-size: 1rem !important;
+                        line-height: 1.6 !important;
+                    }
+                    .cta-primary-btn, .cta-secondary-btn {
+                        width: 100%;
+                        justify-content: center;
                     }
                 }
             `}} />

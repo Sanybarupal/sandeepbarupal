@@ -90,7 +90,7 @@ const Experience = () => {
                                     pointerEvents: 'none'
                                 }}></div>
 
-                                <div style={{ display: 'flex', gap: '30px', alignItems: 'flex-start', flexWrap: 'wrap' }}>
+                                <div className="job-content" style={{ display: 'flex', gap: '30px', alignItems: 'flex-start', flexWrap: 'wrap' }}>
                                     <div style={{
                                         width: '90px', height: '90px', borderRadius: '20px',
                                         border: '1px solid rgba(255,255,255,0.1)',
@@ -183,7 +183,7 @@ const Experience = () => {
                                     e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.1)';
                                     e.currentTarget.style.boxShadow = 'none';
                                 }}>
-                                <div style={{ display: 'flex', gap: '30px', alignItems: 'flex-start', flexWrap: 'wrap' }}>
+                                <div className="job-content" style={{ display: 'flex', gap: '30px', alignItems: 'flex-start', flexWrap: 'wrap' }}>
                                     <div style={{
                                         width: '90px', height: '90px', borderRadius: '20px',
                                         border: '1px solid rgba(255,255,255,0.05)',
@@ -255,6 +255,10 @@ const Experience = () => {
                     .work-journey-container {
                         flex-direction: column;
                         gap: 10px !important;
+                    }
+                    .job-content {
+                        flex-direction: column !important;
+                        gap: 15px !important;
                     }
                     h3 {
                         font-size: 1.4rem !important;
