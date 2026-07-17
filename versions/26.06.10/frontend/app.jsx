@@ -14,6 +14,7 @@ import './role/user/style.css';
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = React.useState(false);
+    const location = useLocation();
 
     return (
         <nav className="navbar">
@@ -35,7 +36,7 @@ const Navbar = () => {
                         <a 
                             href={item === 'Home' ? '/' : `/${item.toLowerCase()}`} 
                             onClick={() => setIsOpen(false)}
-                            className="nav-item"
+                            className={`nav-item ${location.pathname === (item === 'Home' ? '/' : `/${item.toLowerCase()}`) ? 'active' : ''}`}
                         >
                             {item}
                         </a>
