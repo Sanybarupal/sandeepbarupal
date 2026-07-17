@@ -239,7 +239,11 @@ const Experience = () => {
                         padding-left: 20px !important;
                     }
                     .timeline-dot {
-                        left: -26px !important;
+                        left: -29px !important;
+                    }
+                    .glass {
+                        padding: 24px !important;
+                        border-radius: 16px !important;
                     }
                     .page-section {
                         padding-top: 100px !important;
@@ -251,6 +255,12 @@ const Experience = () => {
                     .work-journey-container {
                         flex-direction: column;
                         gap: 10px !important;
+                    }
+                    h3 {
+                        font-size: 1.4rem !important;
+                    }
+                    p {
+                        font-size: 1rem !important;
                     }
                 }
             `}} />

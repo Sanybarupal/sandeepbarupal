@@ -9,6 +9,7 @@ import Service from './role/user/pages/service/index.jsx';
 import Plan from './role/user/pages/plan/index.jsx';
 import Contact from './role/user/pages/contact/index.jsx';
 import Blog from './role/user/pages/blog/index.jsx';
+import ContactAndFooter from './role/user/components/ContactAndFooter.jsx';
 import './role/user/style.css'; 
 
 const Navbar = () => {
@@ -67,17 +68,20 @@ const App = () => (
         <div className="bg-glow glow-bottom-blue"></div>
         <div className="bg-glow glow-green"></div>
         <Navbar />
-        <main>
-            <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/about" element={<About />} />
-                <Route path="/experience" element={<Experience />} />
-                <Route path="/work" element={<Work />} />
-                <Route path="/service" element={<Service />} />
-                <Route path="/plan" element={<Plan />} />
-                <Route path="/blog" element={<Blog />} />
-                <Route path="/contact" element={<Contact />} />
-            </Routes>
+        <main style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
+            <div style={{ flex: 1 }}>
+                <Routes>
+                    <Route path="/" element={<Home />} />
+                    <Route path="/about" element={<About />} />
+                    <Route path="/experience" element={<Experience />} />
+                    <Route path="/work" element={<Work />} />
+                    <Route path="/service" element={<Service />} />
+                    <Route path="/plan" element={<Plan />} />
+                    <Route path="/blog" element={<Blog />} />
+                    <Route path="/contact" element={<Contact />} />
+                </Routes>
+            </div>
+            <ContactAndFooter />
         </main>
     </BrowserRouter>
 );
