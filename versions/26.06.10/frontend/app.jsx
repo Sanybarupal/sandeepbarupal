@@ -68,8 +68,7 @@ const App = () => {
                 duration: 800,
                 once: false,
                 offset: 100,
-                easing: 'ease-in-out',
-                disable: 'mobile'
+                easing: 'ease-in-out'
             });
         }
     }, []);
